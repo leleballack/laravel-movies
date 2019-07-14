@@ -11109,6 +11109,23 @@ a.text-dark:focus {
   margin: 25px;
 }
 
+.card {
+  margin: 30px auto;
+  border: 3px solid black;
+}
+
+.card-img-top {
+  margin: 15px auto;
+}
+
+img {
+  max-width: 270px;
+}
+
+li {
+  list-style: none;
+}
+
 .navbar {
   height: 80px;
   border-bottom: 1px solid #ccc;

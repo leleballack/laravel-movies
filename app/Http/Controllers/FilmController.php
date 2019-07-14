@@ -37,9 +37,10 @@ class FilmController extends Controller
       return redirect()->route("films.index");
     }
 
-    public function show($id)
+    public function show($film_id)
     {
-        //
+        $film = Film::find($film_id);
+        return view ("film_show", compact("film"));
     }
 
     public function edit($id)

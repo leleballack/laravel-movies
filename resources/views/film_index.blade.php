@@ -14,6 +14,7 @@
           <th>Year</th>
           <th>Rating</th>
           <th>Category</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -23,11 +24,13 @@
             <td>{{ $film->release_year }}</td>
             <td>{{ $film->vote ? $film->vote : "no rating yet" }}</td>
             <td>{{ $film->category ? $film->category->name : "N/A" }}</td>
+            <td>
+              <a href="{{ route("films.show", $film->id) }}" class="btn btn-primary">Show</a>
+            </td>
           </tr>
         @endforeach
       </tbody>
     </table>
-
 
     {{-- <ul>
     @foreach ($films as $film)
