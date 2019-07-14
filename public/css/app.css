@@ -11101,6 +11101,20 @@ a.text-dark:focus {
 }
 
 .container {
-  margin-top: 100px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.btn-warning {
+  margin: 25px;
+}
+
+.navbar {
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar img {
+  margin: 20px;
 }
 
