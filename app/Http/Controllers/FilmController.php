@@ -27,6 +27,7 @@ class FilmController extends Controller
         "title" => "bail|required|max:255",
         "release_year" => "required|numeric|between:1900,2019",
         "vote" => "required|numeric|between:1,10",
+        // "category_id" => "required",
       ]);
 
       $new_film = new Film();
