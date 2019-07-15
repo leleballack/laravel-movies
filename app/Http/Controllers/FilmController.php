@@ -23,7 +23,7 @@ class FilmController extends Controller
     public function store(Request $request)
     {
       $validatedData = $request->validate([
-        "title" => "bail|required|max:255",
+        "title" => "bail|required|unique:films|max:255",
         "release_year" => "required|numeric|between:1900,2019",
         "vote" => "required|numeric|between:1,10",
         // "category_id" => "required",
