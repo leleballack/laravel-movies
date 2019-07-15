@@ -26,6 +26,8 @@
             <td>{{ $film->category ? $film->category->name : "N/A" }}</td>
             <td>
               <a href="{{ route("films.show", $film->id) }}" class="btn btn-primary">Show</a>
+              <a href="{{ route("films.edit", $film->id) }}" class="btn btn-secondary">Update</a>
+
             </td>
           </tr>
         @endforeach

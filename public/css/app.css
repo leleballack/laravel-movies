@@ -11105,6 +11105,14 @@ a.text-dark:focus {
   margin-bottom: 100px;
 }
 
+.container form {
+  margin: 40px 0;
+}
+
+.container form button {
+  margin: 40px 0;
+}
+
 .btn-warning {
   margin: 25px;
 }
