@@ -12,18 +12,27 @@
         <div class="col">
           <label>Film Title</label>
           <input name="title" value="{{$film->title}}" type="text" class="form-control" placeholder="Film Title">
+          @error('title')
+            <div class="alert alert-danger">{{ $message }}</div>
+          @enderror
         </div>
 
         <div class="col">
           <label>Film Release Year</label>
           <input name="release_year" value="{{$film->release_year}}" type="number" class="form-control" placeholder="Release Year">
           <small class="form-text text-muted">(Example: 1999)</small>
+          @error('release_year')
+            <div class="alert alert-danger">{{ $message }}</div>
+          @enderror
         </div>
 
         <div class="col">
           <label>Vote: 1-10</label>
           <input name="vote" value="{{$film->vote}}" type="number" class="form-control" placeholder="Vote">
           <small class="form-text text-muted">From 1 to 10: 1 is horrible and 10 is outstanding</small>
+          @error('vote')
+            <div class="alert alert-danger">{{ $message }}</div>
+          @enderror
         </div>
 
         <div class="col">
