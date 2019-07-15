@@ -11105,16 +11105,25 @@ a.text-dark:focus {
   margin-bottom: 100px;
 }
 
-.container form {
-  margin: 40px 0;
-}
-
-.container form button {
-  margin: 40px 0;
-}
-
-.btn-warning {
+.container .btn-success.insert {
   margin: 25px;
+}
+
+.container .delete_btn {
+  display: inline-block;
+}
+
+.container .table td,
+.container .table th {
+  vertical-align: middle;
+}
+
+.container form.edit {
+  margin: 40px 0;
+}
+
+.container form.edit .btn-success {
+  margin: 40px 0;
 }
 
 .card {
@@ -11122,15 +11131,15 @@ a.text-dark:focus {
   border: 3px solid black;
 }
 
-.card-img-top {
+.card .card-img-top {
   margin: 15px auto;
 }
 
-img {
+.card img {
   max-width: 270px;
 }
 
-li {
+.card li {
   list-style: none;
 }
 

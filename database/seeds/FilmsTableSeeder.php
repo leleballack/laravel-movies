@@ -5,11 +5,6 @@ use App\Film;
 
 class FilmsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run() {
       $films = [
         [

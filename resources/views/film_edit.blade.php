@@ -4,10 +4,11 @@
   <div class="container text-center">
     <h1>Update This Film: ""</h1>
     @include('html.form_error')
-    <form action="{{route("films.update", $film->id)}}" method="post">
+    <form class="edit" action="{{route("films.update", $film->id)}}" method="post">
       @method("PUT")
       @csrf
       <div class="form-row">
+
         <div class="col">
           <label>Film Title</label>
           <input name="title" value="{{$film->title}}" type="text" class="form-control" placeholder="Film Title">

@@ -1,39 +1,50 @@
 .container {
   margin-top: 150px;
   margin-bottom: 100px;
-  form {
+
+  .btn-success.insert {
+    margin: 25px;
+  }
+
+  .delete_btn {
+    display: inline-block;
+  }
+
+  .table td,
+  .table th {
+    vertical-align: middle;
+  }
+
+  form.edit {
     margin: 40px 0;
-    button {
-      margin: 40px 0;
-    }
+
+      .btn-success {
+        margin: 40px 0;
+      }
   }
 }
-.btn-warning {
-  margin: 25px;
-}
+
 .card {
   margin: 30px auto;
   border: 3px solid black;
-}
 
-.card-img-top {
-  margin: 15px auto;
-}
+  .card-img-top {
+    margin: 15px auto;
+  }
+
   img {
     max-width: 270px;
-
   }
+
   li {
     list-style: none;
   }
-
-
-
-
+}
 
 .navbar {
   height: 80px;
   border-bottom: 1px solid #ccc;
+
   img {
     margin: 20px;
   }

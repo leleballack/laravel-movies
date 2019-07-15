@@ -5,7 +5,7 @@
   <div class="container">
     <div class="heading text-center">
       <h1>Best Films of All Times</h1>
-      <a href="{{route("films.create")}}" class="btn btn-warning col-2">Insert Movie</a>
+      <a href="{{route("films.create")}}" class="btn btn-success insert col-2">Insert Movie</a>
     </div>
     <table class="table table-striped table-sm text-center">
       <thead class="thead-dark">
@@ -26,8 +26,8 @@
             <td>{{ $film->category ? $film->category->name : "N/A" }}</td>
             <td>
               <a href="{{ route("films.show", $film->id) }}" class="btn btn-primary">Show</a>
-              <a href="{{ route("films.edit", $film->id) }}" class="btn btn-secondary">Update</a>
-
+              <a href="{{ route("films.edit", $film->id) }}" class="btn btn-warning">Update</a>
+              @include('html.delete_button')
             </td>
           </tr>
         @endforeach

@@ -18,7 +18,6 @@ class FilmController extends Controller
     {
         $category = Category::all();
         return view("film_create", compact("category"));
-
     }
 
     public function store(Request $request)
@@ -32,9 +31,9 @@ class FilmController extends Controller
 
       $new_film = new Film();
       $info = $request->all();
-
       $new_film->fill($info);
       $new_film->save();
+
       return redirect()->route("films.index");
     }
 
@@ -56,12 +55,11 @@ class FilmController extends Controller
     public function update(Request $request, $film_id)
     {
           $validatedData = $request->validate([
-          "title" => "bail|required|max:255",
+          "title" => "bail|required|unique:films|max:255",
           "release_year" => "required|numeric|between:1900,2019",
           "vote" => "required|numeric|between:1,10",
           // "category_id" => "required",
         ]);
-
 
         $info = $request->all();
 
@@ -72,6 +70,8 @@ class FilmController extends Controller
 
     public function destroy($film_id)
     {
-        //
+      $film = Film::find($film_id);
+      $film->delete();
+      return redirect()->route("films.index");
     }
 }
