@@ -22,12 +22,18 @@ class FilmController extends Controller
 
     public function store(Request $request)
     {
-      $validatedData = $request->validate([
+      $rules = [
         "title" => "bail|required|unique:films|max:255",
         "release_year" => "required|numeric|between:1900,2019",
         "vote" => "required|numeric|between:1,10",
-        // "category_id" => "required",
-      ]);
+      ];
+      $warning = [
+        "title.required" => "The title is required in order to create a new book",
+        "title.unique" => "This title is already in the database",
+        "release_year.required" => "The release year of the movie is required",
+        "vote.required" => "The vote is required and goes between 1 and 10"
+      ];
+      $validatedData = $request->validate($rules, $warning);
 
       $new_film = new Film();
       $info = $request->all();
